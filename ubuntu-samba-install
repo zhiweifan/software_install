@@ -1,0 +1,16 @@
+ubuntu samba安装
+ubuntu 16.04.2
+1.	sudo apt-get install samba
+2.	配置/etc/samba/smb.conf文件
+[albertfan]
+comment="albertfan's share samba folder"
+path=/home/albertfan/share
+available = yes
+browseable = yes
+public = yes
+writable = yes
+create mask = 0644 //创建文件属性
+force user = albertfan //和服务端用户一样
+3.windows下访问连接
+首先确保能ping通。然后运行\\ip
+映射网络驱动器。
